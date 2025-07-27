@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Interactive coding interview preparation platform with data structures, algorithms, and practice problems",
   "private": true,
-  "homepage": "https://YOUR_USERNAME.github.io/coding-interview-prep",
+  "homepage": "https://ihsaland.github.io/codingPrep",
   "dependencies": {
     "@monaco-editor/react": "^4.6.0",
     "@types/node": "^16.18.0",
