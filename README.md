@@ -78,6 +78,53 @@ A comprehensive interactive learning platform for coding interview preparation, 
 4. **Open your browser**
    Navigate to `http://localhost:3000` to view the application
 
+## 🌐 GitHub Pages Deployment
+
+### Quick Deployment
+1. **Update homepage URL** in `package.json`:
+   ```json
+   "homepage": "https://YOUR_USERNAME.github.io/coding-interview-prep"
+   ```
+
+2. **Deploy to GitHub Pages**:
+   ```bash
+   npm run deploy
+   ```
+
+3. **Configure GitHub Repository**:
+   - Go to your repository settings
+   - Navigate to "Pages" section
+   - Set source to "Deploy from a branch"
+   - Select "gh-pages" branch
+   - Save the configuration
+
+### Manual Deployment Steps
+1. **Build the project**:
+   ```bash
+   npm run build
+   ```
+
+2. **Install gh-pages** (if not already installed):
+   ```bash
+   npm install --save-dev gh-pages
+   ```
+
+3. **Deploy**:
+   ```bash
+   npm run deploy
+   ```
+
+### Custom Domain (Optional)
+1. **Add custom domain** to your repository settings
+2. **Create CNAME file** in the `public` folder:
+   ```
+   yourdomain.com
+   ```
+3. **Update homepage** in `package.json`:
+   ```json
+   "homepage": "https://yourdomain.com"
+   ```
+
 ## 🏗️ Project Structure
 
 ```
@@ -147,6 +194,7 @@ src/
 - `npm build` - Builds the app for production
 - `npm test` - Launches the test runner
 - `npm eject` - Ejects from Create React App (one-way operation)
+- `npm run deploy` - Deploys to GitHub Pages
 
 ## 📊 Content Overview
 
