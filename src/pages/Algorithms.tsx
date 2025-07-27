@@ -4,6 +4,13 @@ import { Brain, Play, Pause, RotateCcw, ArrowRight } from 'lucide-react';
 import BubbleSortVisualization from '../components/visualizations/BubbleSortVisualization';
 import QuickSortVisualization from '../components/visualizations/QuickSortVisualization';
 import BinarySearchVisualization from '../components/visualizations/BinarySearchVisualization';
+import MergeSortVisualization from '../components/visualizations/MergeSortVisualization';
+import LinearSearchVisualization from '../components/visualizations/LinearSearchVisualization';
+import DepthFirstSearchVisualization from '../components/visualizations/DepthFirstSearchVisualization';
+import BreadthFirstSearchVisualization from '../components/visualizations/BreadthFirstSearchVisualization';
+import InsertionSortVisualization from '../components/visualizations/InsertionSortVisualization';
+import SelectionSortVisualization from '../components/visualizations/SelectionSortVisualization';
+import HeapSortVisualization from '../components/visualizations/HeapSortVisualization';
 
 const Algorithms: React.FC = () => {
   const [selectedAlgorithm, setSelectedAlgorithm] = useState('bubble-sort');
@@ -72,7 +79,7 @@ const Algorithms: React.FC = () => {
         'Recursively sort halves',
         'Merge sorted halves'
       ],
-      visualization: null
+      visualization: MergeSortVisualization
     },
     {
       id: 'linear-search',
@@ -88,7 +95,7 @@ const Algorithms: React.FC = () => {
         'Compare with target',
         'Move to next element if not found'
       ],
-      visualization: null
+      visualization: LinearSearchVisualization
     },
     {
       id: 'depth-first-search',
@@ -104,7 +111,7 @@ const Algorithms: React.FC = () => {
         'Explore as deep as possible',
         'Backtrack when no more options'
       ],
-      visualization: null
+      visualization: DepthFirstSearchVisualization
     },
     {
       id: 'breadth-first-search',
@@ -120,7 +127,7 @@ const Algorithms: React.FC = () => {
         'Visit all neighbors',
         'Move to next level'
       ],
-      visualization: null
+      visualization: BreadthFirstSearchVisualization
     },
     {
       id: 'insertion-sort',
@@ -136,7 +143,7 @@ const Algorithms: React.FC = () => {
         'Insert into sorted portion',
         'Shift elements as needed'
       ],
-      visualization: null
+      visualization: InsertionSortVisualization
     },
     {
       id: 'selection-sort',
@@ -152,7 +159,7 @@ const Algorithms: React.FC = () => {
         'Swap with first unsorted element',
         'Expand sorted region'
       ],
-      visualization: null
+      visualization: SelectionSortVisualization
     },
     {
       id: 'heap-sort',
@@ -168,7 +175,7 @@ const Algorithms: React.FC = () => {
         'Extract maximum repeatedly',
         'Place in sorted portion'
       ],
-      visualization: null
+      visualization: HeapSortVisualization
     }
   ];
 
@@ -608,7 +615,10 @@ print(f"Result: {result}")`;
                       Interactive Visualization
                     </h3>
                     <div className="bg-gray-50 rounded-lg p-6">
-                      <VisualizationComponent isPlaying={isPlaying} />
+                      <VisualizationComponent 
+                        isPlaying={isPlaying} 
+                        onReset={() => setIsPlaying(false)}
+                      />
                     </div>
                   </div>
                 )}
