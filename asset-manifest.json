@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/codingPrep/static/css/main.c20670e6.css",
+    "main.js": "/codingPrep/static/js/main.71f0de24.js",
+    "index.html": "/codingPrep/index.html",
+    "main.c20670e6.css.map": "/codingPrep/static/css/main.c20670e6.css.map",
+    "main.71f0de24.js.map": "/codingPrep/static/js/main.71f0de24.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c20670e6.css",
+    "static/js/main.71f0de24.js"
+  ]
+}
