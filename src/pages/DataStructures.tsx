@@ -6,6 +6,11 @@ import LinkedListVisualization from '../components/visualizations/LinkedListVisu
 import StackVisualization from '../components/visualizations/StackVisualization';
 import QueueVisualization from '../components/visualizations/QueueVisualization';
 import TreeVisualization from '../components/visualizations/TreeVisualization';
+import HashTableVisualization from '../components/visualizations/HashTableVisualization';
+import GraphVisualization from '../components/visualizations/GraphVisualization';
+import HeapVisualization from '../components/visualizations/HeapVisualization';
+import TrieVisualization from '../components/visualizations/TrieVisualization';
+import SetVisualization from '../components/visualizations/SetVisualization';
 
 const DataStructures: React.FC = () => {
   const [selectedStructure, setSelectedStructure] = useState('array');
@@ -88,7 +93,7 @@ const DataStructures: React.FC = () => {
         deletion: 'O(1)'
       },
       useCases: ['Database indexing', 'Caching', 'Symbol tables'],
-      visualization: null
+      visualization: HashTableVisualization
     },
     {
       id: 'graph',
@@ -101,7 +106,7 @@ const DataStructures: React.FC = () => {
         deletion: 'O(1)'
       },
       useCases: ['Social networks', 'GPS navigation', 'Network routing'],
-      visualization: null
+      visualization: GraphVisualization
     },
     {
       id: 'heap',
@@ -114,7 +119,7 @@ const DataStructures: React.FC = () => {
         deletion: 'O(log n)'
       },
       useCases: ['Priority queues', 'Heap sort', 'Graph algorithms'],
-      visualization: null
+      visualization: HeapVisualization
     },
     {
       id: 'trie',
@@ -127,7 +132,7 @@ const DataStructures: React.FC = () => {
         deletion: 'O(m)'
       },
       useCases: ['Autocomplete', 'Spell checkers', 'IP routing'],
-      visualization: null
+      visualization: TrieVisualization
     },
     {
       id: 'set',
@@ -140,7 +145,7 @@ const DataStructures: React.FC = () => {
         deletion: 'O(1)'
       },
       useCases: ['Duplicate removal', 'Membership testing', 'Mathematical operations'],
-      visualization: null
+      visualization: SetVisualization
     }
   ];
 
@@ -692,7 +697,10 @@ class ${structureName}:
                     <h3 className="text-lg font-semibold text-gray-900 mb-4">
                       Interactive Visualization
                     </h3>
-                    <VisualizationComponent isPlaying={isPlaying} />
+                    <VisualizationComponent 
+                      isPlaying={isPlaying} 
+                      onReset={() => setIsPlaying(false)}
+                    />
                   </div>
                 )}
 
